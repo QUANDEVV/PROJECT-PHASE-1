@@ -1,0 +1,66 @@
+
+nav {
+  background-color: #333; /* Set background color */
+  font-family: Arial, sans-serif; /* Set font */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  border-radius: 10px; /* Set border radius */
+  overflow: hidden; /* Hide overflowing border */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  display: inline-block;
+  color: #fff; /* Set font color */
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  background-color: #555; /* Set hover background color */
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+
+
+
+.img-container {
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+/* Style for the image */
+.img-container img {
+  border-radius: 20px ;
+
+  max-width: 100%;
+  height: 400px;
+}
+
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* text-align: center; */
+  font-size: 25px;
+}
+
+
+.container {
+  height: 160px;
+  width: 140px;
+  background-color: black;
+  border-radius: 10px;
+
+}
