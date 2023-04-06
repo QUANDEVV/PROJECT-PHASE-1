@@ -866,7 +866,7 @@ p {
 
 .card img {
   width: 400px;
-  height: 200px; /* Set a fixed height for the image container */
+  height: 200px; 
   object-fit: cover; /* Ensures the image fills the container without stretching */
   border-radius: 10px; /* Simplified syntax for border-radius */
   overflow: hidden;
