@@ -1,55 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <title> Booking Flight</title>
 </head>
+
 <body>
-
-
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Flights</a></li>
-      <li><a href="#">My Bookings</a></li>
-      <li><a href="#">Deals</a></li>
-      <li><a href="#">Customer Support</a></li>
-
-    </ul>
-  </nav>
-
-
-
-    
-    <div class="img-container">
-      <img src="https://images.unsplash.com/photo-1517429128955-67ff5c1e29da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9laW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Example Image">
+ 
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>E</span>mirates <br><span>A</span>irways</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Buy Ticket</a></li>
+            <li><a href="#projects" data-after="Projects">Book A Flight</a></li>
+            
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-<h2>Buy Your Tickets</h2>
-
-<div class="container"></div>
-<div class="container"></div>
+  </section> 
+ 
+  <!-- End Header -->
 
 
-<h2>Book Your Flight</h2>
-form to book
-destination ,where to ,submit ,time
-then a card
+  <!-- Hero Section  -->
+<section id="hero">
+
+    <div id="hero-video">
+      <video autoplay loop muted playsinline id="bg-video">
+        <source src="vid1.mp4" type="video/mp4">
+        
+      </video>
+    </div>
+ 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="hero container">
+      <div>
+        
+        <h1>Hello, <span></span></h1>
+        <h1>Welcome <span></span></h1>
+        <h1>OnBoard <span></span></h1>
+       
+      </div>
+    </div>
+  </section>
+  
 
 
-the card should be able to delete 
-when card added it shold show a pop notification showing flight booked
 
-<h2>Book Your Flight</h2>
+  <section id="services">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-
-dribble has good designs
+    <h1 class="section-title">BUY A TICKET</h1>
+  
 
   
+      <div class="bodyy">
+        <!-- Your code here -->
+      </div>
   
-</body>
-</html>
+
+    </section> -->
+    <!-- End Service Section -->
+  
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects container">
+        <div class="projects-header">
+          <h1 class="section-title">BOOK A FLIGHT</span></h1>
+        </div>
+
+
+        <form id="productForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required>
+          
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" required>
+          
+          <label for="from">From:</label>
+          <select id="from" name="from" required>
+            <option value="">Select an option</option>
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+          </select>
+          
+          <label for="to">To:</label>
+          <select id="to" name="to" required>
+            <option value="">Select an option</option>
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Sydney">Sydney</option>
+          </select>
+          
+          <label for="departure-date">Departure Date:</label>
+          <input type="date" id="departure-date" name="departure-date" required>
+          
+          <label for="return-date">Return Date:</label>
+          <input type="date" id="return-date" name="return-date" required>
+          
+          <input onclick="validate()" type="submit" value="Book Flight">
+        </form>
+
+
+
+        <div class="details">
+          <!-- Your code here -->
+        </div>
+        
+        </div>
+      </div>
+    </section>  
+    <!-- End Projects Section -->
+  
+    
+    <!-- End About Section -->
+  
+  
+    <section id="contact">
+      <div class="contact container">
+        <div>
+          <h1 class="section-title">Contact <span>info</span></h1>
+        </div>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+            <div class="contact-info">
+              <h1>Phone</h1>
+              <h2>071111111</h2>
+              <h2>072222222</h2>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+            <div class="contact-info">
+              <h1>Email</h1>
+              <h2>MORINGA@gmail.com</h2>
+              
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+            <div class="contact-info">
+              <h1>Address</h1>
+              <h2>9WEST WESTLANDS </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- End Contact Section -->
+  
+    <Footer -->
+     <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>E</span>mirates <span>A</span>irways</h1>
+        </div>
+        <h2>BOOK WITH EMIRATES</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+         
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2023 KENNEDY. All rights reserved</p>
+      </div>
+    </section> 
+  
+     <script src="./app.js"></script>
+     <script src="js/sweetalert.js"></script>
+
+
+  </body>
+  
+  </html>  
+ 
+  
+  
+  
+  
