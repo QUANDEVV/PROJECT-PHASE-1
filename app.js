@@ -173,8 +173,6 @@ function handleSubmit(e) {
     to: e.target.to.value,
     departure: e.target.departure.value,
     return: e.target.return.value,
-
-
   }
 
   console.log(productObj)

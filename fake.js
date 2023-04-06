@@ -11,15 +11,7 @@ fetch("http://localhost:4005/bookings")
     card.classList.add('card');
     card.innerHTML = `
     
-      <div class="can">
-        <h3><b>${details.name}</b></h3>
-        <h3><b>${details.email}</b></h3>
-        <h3><b>${details.phone}</b></h3>
-        <h3><b>${details.from}</b></h3>
-        <h3><b>${details.to}</b></h3>
-        // <p>${details.departure}</p>
-        // <p>${details.return}</p>
-        <div class="card-actions">
+      
           
           <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
         </div>
