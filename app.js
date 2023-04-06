@@ -51,11 +51,13 @@ fetch("http://localhost:4005/flights")
           <p>Depature: ${flight.Depature}</p>
           <p>Available Tickets: <span class="available-tickets">${flight.capacity - flight.tickets_sold}</span></p>
           <button class="buy-ticket">Buy</button>
+          <span></span>
+          
         </div>
       `;
       characters.appendChild(card);
 
-
+      
       // Add a click event listener to the "Buy Ticket" button
       const buyButton = card.querySelector('.buy-ticket');
       buyButton.addEventListener('click', function(event) {
@@ -122,17 +124,16 @@ fetch("http://localhost:4005/flights")
           <p>To: ${product.to}</p>
           <p>Departure Date: ${product.departure}</p>
           <p>Return Date: ${product.return}</p>
-          <div class="card-actions">
-          
-          <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
-        </div>
+
+          <div class="card-actions" >
+            <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
           </div>
        
       `;
       characters.appendChild(card);
 
       // Add event listeners to the buttons
-      const editButton = card.querySelector('.edit-button');
+      
       const deleteButton = card.querySelector('.delete-button');
       
       deleteButton.addEventListener('click',() =>{
@@ -141,10 +142,7 @@ fetch("http://localhost:4005/flights")
         deleteProduct(product.id)
       });
       
-      editButton.addEventListener('click', () => {
-        // Handle edit action
-        console.log('Edit clicked for product', product.id);
-      });
+    
     });
   });
   
@@ -200,3 +198,10 @@ function addProduct(productObj) {
 
 
 
+
+
+  const likeButton = card.querySelector('.like-button');
+  likeButton.addEventListener('click', function() {
+    // Toggle the heart emoji's color
+    likeButton.classList.toggle('liked');
+  });

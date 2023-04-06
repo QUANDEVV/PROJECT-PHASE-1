@@ -831,7 +831,16 @@ p {
 /* Styles for the body element */
 /* Styles for the body element */
 
-  
+
+
+.details {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+
 .bodyy {
   display: flex;
   flex-wrap: wrap;
@@ -845,6 +854,7 @@ p {
   box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
+	background-color: #8aaeb4;
 }
 
 .can {
@@ -972,3 +982,21 @@ form {
 		input[type="submit"]:hover {
 			background-color: #0062cc;
 		}
+
+
+
+		.book {
+			background-color: #007bff;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+		}
+
+
+
+
+		.liked {
+			color: red;
+			cursor: pointer;
+		}
+		
