@@ -188,11 +188,13 @@ function addProduct(productObj) {
     },
     body: JSON.stringify(productObj)
   })
-  .then(res => res.json
-())
-    .then(product => console.log(product))
+  .then(res => res.json())
+    .then(product => {
+      console.log(product);
+      alert('Flight booked Succefully!');
+    })
     .catch(err => console.error(err)); // Add error handling
-  }
+}
 
 
 
