@@ -106,13 +106,17 @@ fetch("http://localhost:4005/bookings")
 .then(function (data) {
   const characters = document.querySelector('.details');
 
-  data.forEach(function (produc) {
+  data.forEach(function (details) {
     // Create a new card for each product and add it to the UI
     const card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
-      <img src="${product.image}" alt="Product Image" style="width:50%; height:50%">
+    
       <div class="can">
+        <h3><b>${details.name}</b></h3>
+        <h3><b>${details.name}</b></h3>
+        <h3><b>${details.name}</b></h3>
+        <h3><b>${details.name}</b></h3>
         <h3><b>${product.name}</b></h3>
         <p>${product.description}</p>
         <p>${product.price}</p>
@@ -165,7 +169,10 @@ let productObj = {
   image: e.target.email.value,
   phone: e.target.phone.value,
   from: e.target.from.value ,
-  to: e.target.to.value 
+  to: e.target.to.value ,
+  date : e.target.departure-date.value,
+  date : e.target.return-date.value
+
 
 }
 
