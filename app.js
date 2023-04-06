@@ -53,7 +53,9 @@ fetch("http://localhost:4005/flights")
           <button class="buy-ticket">Buy</button>
           <span></span>
           <button class="like-button" style="background-color: transparent; border: none; font-size: 30px">&#10084;&#65039;</button>
-
+      
+          <button class="like-button" style="background-color: transparent; border: none; font-size: 30px">&#x1F4AC;&#xFE0F;
+          </button>
           
         </div>
       `;
@@ -130,6 +132,9 @@ fetch("http://localhost:4005/flights")
           <div class="card-actions" >
             <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
           </div>
+
+
+          
        
       `;
       characters.appendChild(card);
@@ -205,9 +210,11 @@ function addProduct(productObj) {
 
 
 
-
-  const likeButton = card.querySelector('.like-button');
-  likeButton.addEventListener('click', function() {
-    // Toggle the heart emoji's color
-    likeButton.classList.toggle('liked');
-  });
+// Add a click event listener to the like button
+const likeButton = card.querySelector('.like-button');
+const likeCounter = card.querySelector('.like-counter');
+let likeCount = 0;
+likeButton.addEventListener('click', function() {
+  likeCount++;
+  likeCounter.textContent = likeCount;
+});
