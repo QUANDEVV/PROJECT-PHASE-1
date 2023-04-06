@@ -154,8 +154,12 @@ fetch("http://localhost:4005/flights")
       }
     })
     .then(res => res.json)
-    .then(product =>console.log(product))
+    .then(product => {
+      console.log(product);
+      alert(' Your Flight was Canceled Succefully 🎊🎉!!');
+    })
   }
+
   
 
 // Get the reference to the form and attach an event listener for form submit
@@ -191,7 +195,7 @@ function addProduct(productObj) {
   .then(res => res.json())
     .then(product => {
       console.log(product);
-      alert('Flight booked Succefully!');
+      alert('Flight booked Succefully 🎊🎉!');
     })
     .catch(err => console.error(err)); // Add error handling
 }

@@ -66,37 +66,6 @@
     },
     {
       "name": "CHARGER",
-      "image": "https://images.unsplash.com/photo-1587749091230-fb8a034d695c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-      "description": "yy",
-      "price": "20",
-      "id": 6
-    },
-    {
-      "name": "CHARGER",
-      "image": "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FkZ2V0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-      "description": "fff",
-      "price": "1000",
-      "id": 7
-    },
-    {
-      "name": "Bluetooth",
-      "image": "https://plus.unsplash.com/premium_photo-1670588892214-19d7d31e4293?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "description": "dewise",
-      "price": "10000",
-      "id": 8
-    },
-    {
-      "name": "CHARGER",
-      "email": "moringa school",
-      "phone": "07222222",
-      "from": "New York",
-      "to": "Paris",
-      "departure": "2023-04-19",
-      "return": "2023-04-22",
-      "id": 9
-    },
-    {
-      "name": "CHARGER",
       "email": "mzeequan",
       "phone": "07222222",
       "from": "Los Angeles",
@@ -144,16 +113,6 @@
       "departure": "2023-04-07",
       "return": "2023-04-25",
       "id": 14
-    },
-    {
-      "name": "Faith",
-      "email": "moringa school",
-      "phone": "11111111",
-      "from": "Houston",
-      "to": "Paris",
-      "departure": "2023-04-07",
-      "return": "2023-04-27",
-      "id": 15
     }
   ]
 }
