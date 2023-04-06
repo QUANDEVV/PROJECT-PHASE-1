@@ -110,8 +110,7 @@
           <h1 class="section-title">BOOK A FLIGHT</span></h1>
         </div>
 
-
-        <form id="productForm">
+         <form  method="POST" id="productForm">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
           
@@ -139,20 +138,25 @@
             <option value="Sydney">Sydney</option>
           </select>
           
-          <label for="departure-date">Departure Date:</label>
-          <input type="date" id="departure-date" name="departure-date" required>
+          <label for="departure">Departure Date:</label>
+          <input type="date" id="departure" name="departure" required>
           
-          <label for="return-date">Return Date:</label>
-          <input type="date" id="return-date" name="return-date" required>
-          
+          <label for="return">Return Date:</label>
+          <input type="date" id="return" name="return" required>
           <input onclick="validate()" type="submit" value="Book Flight">
-        </form>
-
-
-
+         
+        </form> 
+      
+      
+      
+      
         <div class="details">
-          <!-- Your code here -->
+      
+      
+          
         </div>
+      
+        
         
         </div>
       </div>

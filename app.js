@@ -99,60 +99,66 @@ fetch("http://localhost:4005/flights")
 
 
   // Fetch the list of products from the server and display them in the UI
-fetch("http://localhost:4005/bookings")
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
-  const characters = document.querySelector('.details');
 
-  data.forEach(function (details) {
-    // Create a new card for each product and add it to the UI
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-    
-      <div class="can">
-        <h3><b>${details.name}</b></h3>
-        <h3><b>${details.email}</b></h3>
-        <h3><b>${details.phone}</b></h3>
-        <h3><b>${details.from}</b></h3>
-        <h3><b>${details.to}</b></h3>
-        // <p>${details.departure}</p>
-        // <p>${details.return}</p>
-        <div class="card-actions">
+
+
+  fetch("http://localhost:4005/products")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    const characters = document.querySelector('.details');
+
+    data.forEach(function (product) {
+      // Create a new card for each product and add it to the UI
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        
+          <h2><b>Name: ${product.name}</b></h3>
+          <p>Email: ${product.email}</p>
+          <p>Phone: ${product.phone}</p>
+          <p>From: ${product.from}</p>
+          <p>To: ${product.to}</p>
+          <p>Departure Date: ${product.departure}</p>
+          <p>Return Date: ${product.return}</p>
+          <div class="card-actions">
           
           <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
         </div>
-      </div>h1>BOOK A FLIGHT</h1>
-    `;
-    characters.appendChild(card);
+          </div>
+       
+      `;
+      characters.appendChild(card);
 
-    // Add event listeners to the buttons
-    
-    const deleteButton = card.querySelector('.delete-button');
-    
-    deleteButton.addEventListener('click',() =>{
-      card.remove()
-      console.log(details.id)
-      deleteProduct(details.id)
+      // Add event listeners to the buttons
+      const editButton = card.querySelector('.edit-button');
+      const deleteButton = card.querySelector('.delete-button');
+      
+      deleteButton.addEventListener('click',() =>{
+        card.remove()
+        console.log(product.id)
+        deleteProduct(product.id)
+      });
+      
+      editButton.addEventListener('click', () => {
+        // Handle edit action
+        console.log('Edit clicked for product', product.id);
+      });
     });
-    
-   
   });
-});
-
-function deleteProduct(id){
-  fetch(`http://localhost:4005/bookings/${id}`,{
-    method:'DELETE',
-    headers: {
-      'Content-Type':'application/json'
-    }
-  })
-  .then(res => res.json)
-  .then(product =>console.log(product))
-}
-
+  
+  function deleteProduct(id){
+    fetch(`http://localhost:4005/products/${id}`,{
+      method:'DELETE',
+      headers: {
+        'Content-Type':'application/json'
+      }
+    })
+    .then(res => res.json)
+    .then(product =>console.log(product))
+  }
+  
 
 // Get the reference to the form and attach an event listener for form submit
 const form = document.querySelector('#productForm');
@@ -160,25 +166,26 @@ form.addEventListener('submit', handleSubmit);
 
 // Define the function that will be called when the form is submitted
 function handleSubmit(e) {
-e.preventDefault();
-let productObj = {
-  name: e.target.name.value,
-  phone: e.target.phone.value,
-  from: e.target.from.value ,
-  to: e.target.to.value ,
-  departure : e.target.departure.value,
-  return : e.target.return.value
+  e.preventDefault();
+  let productObj = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    phone: e.target.phone.value,
+    from: e.target.from.value,
+    to: e.target.to.value,
+    departure: e.target.departure.value,
+    return: e.target.return.value,
 
 
-}
+  }
 
-console.log(productObj)
-addProduct(productObj);
+  console.log(productObj)
+  addProduct(productObj);
 }
 
 // Define the function that will add a new product to the server
 function addProduct(productObj) {
-  fetch('http://localhost:3000/bookings', {
+  fetch('http://localhost:4005/products', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -191,23 +198,5 @@ function addProduct(productObj) {
     .catch(err => console.error(err)); // Add error handling
   }
 
-
-
-function validate() {
-  const form = document.getElementById("#productForm");
-  const name = document.getElementById('name').value;
-  const Email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const from = document.getElementById('from').value;
-  const to = document.getElementById('to').value;
-
-  if (  name == "" || Email ==""|| phone == ""|| from == "" || to == "") { 
-    Swal.fire('oop', "all fiields are rquired", 'error');
-   } else {
-
-   }
-
-
-}
 
 
