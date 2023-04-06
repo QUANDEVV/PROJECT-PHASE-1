@@ -63,12 +63,16 @@ fetch("http://localhost:4001/flights")
   .catch(function(error) {
     console.log('There was an error fetching the movie data:', error);
   });
+  
 
 
 
 
 
-  // Fetch the list of products from the server and display them in the UI
+
+
+
+
 fetch("http://localhost:4004/products")
 .then(function (response) {
   return response.json();
