@@ -162,9 +162,11 @@ function handleSubmit(e) {
 e.preventDefault();
 let productObj = {
   name: e.target.name.value,
-  image: e.target.image_url.value,
-  description: e.target.description.value,
-  price: e.target.price.value // Fixed typo here, should be price
+  image: e.target.email.value,
+  phone: e.target.phone.value,
+  from: e.target.from.value ,
+  to: e.target.to.value 
+
 }
 
 console.log(productObj)
