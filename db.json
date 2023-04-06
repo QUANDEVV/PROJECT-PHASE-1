@@ -5,7 +5,7 @@
       "title": "Hawaiii",
       "capacity": 30,
       "Depature": "04:00PM",
-      "tickets_sold": 27,
+      "tickets_sold": 28,
       "description": "A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.",
       "poster": "https://images.unsplash.com/photo-1517429128955-67ff5c1e29da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9laW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
     },
@@ -14,7 +14,7 @@
       "title": "China",
       "capacity": 50,
       "Depature": "06:45PM",
-      "tickets_sold": 44,
+      "tickets_sold": 46,
       "description": "A family gets lost on the road and stumbles upon a hidden, underground, devil-worshiping cult led by the fearsome Master and his servant Torgo.",
       "poster": "https://images.unsplash.com/photo-1536825250137-962bff445079?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJvZWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
     },
@@ -32,7 +32,7 @@
       "title": "Australia",
       "capacity": 40,
       "Depature": "09:00PM",
-      "tickets_sold": 31,
+      "tickets_sold": 35,
       "description": "A young man meets a farm girl who is actually a witch.",
       "poster": "https://media.istockphoto.com/id/475218464/photo/jumbo-jet.jpg?b=1&s=170667a&w=0&k=20&c=aqDWhxpX0f7xfn5uzc59EiPKqfdbuojC_2Y6KCNXTEA="
     },
@@ -41,7 +41,7 @@
       "title": "South Africa",
       "capacity": 50,
       "Depature": "03:30PM",
-      "tickets_sold": 45,
+      "tickets_sold": 46,
       "description": "The Martians kidnap Santa Claus because there is nobody on Mars to give their children presents.",
       "poster": "https://images.unsplash.com/photo-1506654013677-20cac9a8a9e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     }
@@ -63,56 +63,6 @@
       "description": "Better tv",
       "price": "400",
       "id": 5
-    },
-    {
-      "name": "CHARGER",
-      "email": "mzeequan",
-      "phone": "07222222",
-      "from": "Los Angeles",
-      "to": "Sydney",
-      "departure": "2023-04-07",
-      "return": "2023-04-24",
-      "id": 10
-    },
-    {
-      "name": "Faith",
-      "email": "mzeequan",
-      "phone": "07222222",
-      "from": "Chicago",
-      "to": "Paris",
-      "departure": "2023-04-07",
-      "return": "2023-04-18",
-      "id": 11
-    },
-    {
-      "name": "Faith",
-      "email": "moringa school",
-      "phone": "11111111",
-      "from": "Los Angeles",
-      "to": "Tokyo",
-      "departure": "2023-04-07",
-      "return": "2023-04-23",
-      "id": 12
-    },
-    {
-      "name": "Bluetooth",
-      "email": "@gmail",
-      "phone": "11111111",
-      "from": "Los Angeles",
-      "to": "Sydney",
-      "departure": "2023-04-04",
-      "return": "2023-04-28",
-      "id": 13
-    },
-    {
-      "name": "Bluetooth",
-      "email": "moringa school",
-      "phone": "11111111",
-      "from": "Los Angeles",
-      "to": "Tokyo",
-      "departure": "2023-04-07",
-      "return": "2023-04-25",
-      "id": 14
     }
   ]
 }

@@ -27,14 +27,12 @@ menu_item.forEach((item) => {
 
 
 
-
 fetch("http://localhost:4005/flights")
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     // Loop through each movie in the data and add it to the filmList
-    
 
     // Select the .body element
     const characters = document.querySelector('.bodyy');
@@ -74,8 +72,8 @@ fetch("http://localhost:4005/flights")
           availableTickets.textContent = numAvailableTickets - 1;
 
           // Update the movie data in the backend
-          const newTicketsSold = movie.tickets_sold + 1;
-          fetch(`http://localhost:4000/films/${flight.id}`, {
+          const newTicketsSold = flight.tickets_sold + 1;
+          fetch(`http://localhost:4005/flights/${flight.id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -86,19 +84,22 @@ fetch("http://localhost:4005/flights")
               if (!response.ok) {
                 throw new Error('Network response was not ok');
               }
+              alert(`You have bought a ticket to ${flight.title} 🥳🥳 `);
             })
             .catch(function(error) {
-              console.error('There was a problem updating the movie data:', error);
+              console.error('There was a problem updating the flight data:', error);
             });
         } else {
-          alert('Sorry, this showing is sold out!');
+          alert('Sorry, this flight is sold out!');
         }
       });
     });
   })
   .catch(function(error) {
-    console.log('There was an error fetching the movie data:', error);
+    console.log('There was an error fetching the flight data:', error);
   });
+
+
 
 
 
@@ -202,7 +203,7 @@ function addProduct(productObj) {
   .then(res => res.json())
     .then(product => {
       console.log(product);
-      alert('Flight booked Succefully 🎊🎉!');
+      alert('Flight booked Succefully. Have a nice flight Ahead 🎊🎉!');
     })
     .catch(err => console.error(err)); // Add error handling
 }
