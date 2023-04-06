@@ -114,12 +114,12 @@ fetch("http://localhost:4005/bookings")
     
       <div class="can">
         <h3><b>${details.name}</b></h3>
-        <h3><b>${details.name}</b></h3>
-        <h3><b>${details.name}</b></h3>
-        <h3><b>${details.name}</b></h3>
-        <h3><b>${product.name}</b></h3>
-        <p>${product.description}</p>
-        <p>${product.price}</p>
+        <h3><b>${details.email}</b></h3>
+        <h3><b>${details.phone}</b></h3>
+        <h3><b>${details.from}</b></h3>
+        <h3><b>${details.to}</b></h3>
+        // <p>${details.departure}</p>
+        // <p>${details.return}</p>
         <div class="card-actions">
           
           <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
@@ -129,24 +129,21 @@ fetch("http://localhost:4005/bookings")
     characters.appendChild(card);
 
     // Add event listeners to the buttons
-    const editButton = card.querySelector('.edit-button');
+    
     const deleteButton = card.querySelector('.delete-button');
     
     deleteButton.addEventListener('click',() =>{
       card.remove()
-      console.log(product.id)
-      deleteProduct(product.id)
+      console.log(details.id)
+      deleteProduct(details.id)
     });
     
-    editButton.addEventListener('click', () => {
-      // Handle edit action
-      console.log('Edit clicked for product', product.id);
-    });
+   
   });
 });
 
 function deleteProduct(id){
-  fetch(`http://localhost:4005/products/${id}`,{
+  fetch(`http://localhost:4005/bookings/${id}`,{
     method:'DELETE',
     headers: {
       'Content-Type':'application/json'
@@ -166,12 +163,11 @@ function handleSubmit(e) {
 e.preventDefault();
 let productObj = {
   name: e.target.name.value,
-  image: e.target.email.value,
   phone: e.target.phone.value,
   from: e.target.from.value ,
   to: e.target.to.value ,
-  date : e.target.departure-date.value,
-  date : e.target.return-date.value
+  departure : e.target.departure.value,
+  return : e.target.return.value
 
 
 }
@@ -182,18 +178,19 @@ addProduct(productObj);
 
 // Define the function that will add a new product to the server
 function addProduct(productObj) {
-fetch('http://localhost:4005/products', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(productObj)
-})
-.then(res => res.json
+  fetch('http://localhost:3000/bookings', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(productObj)
+  })
+  .then(res => res.json
 ())
-  .then(product => console.log(product))
-  .catch(err => console.error(err)); // Add error handling
-}
+    .then(product => console.log(product))
+    .catch(err => console.error(err)); // Add error handling
+  }
+
 
 
 function validate() {
