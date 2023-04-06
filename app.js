@@ -52,6 +52,8 @@ fetch("http://localhost:4005/flights")
           <p>Available Tickets: <span class="available-tickets">${flight.capacity - flight.tickets_sold}</span></p>
           <button class="buy-ticket">Buy</button>
           <span></span>
+          <button class="like-button" style="background-color: transparent; border: none; font-size: 30px">&#10084;&#65039;</button>
+
           
         </div>
       `;
