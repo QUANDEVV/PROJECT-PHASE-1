@@ -164,7 +164,7 @@ fetch("http://localhost:4005/flights")
     .then(res => res.json)
     .then(product => {
       console.log(product);
-      alert(' Your Flight was Canceled Succefully 🎊🎉!!');
+      alert(' Your Flight was Canceled Succefully 💔💔!!');
     })
   }
 
