@@ -16,6 +16,7 @@ This is a flight booking app that allows users to search for and book flights fr
 # Installation
     1. Clone the repository
     2. Start the server
+    
  
 The server will be running at http://localhost:4005.
 The client will be running at http://localhost:3000.
