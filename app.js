@@ -1,18 +1,9 @@
-
-
-
-
 fetch("http://localhost:4005/flights")
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    // Loop through each movie in the data and add it to the filmList
-
-    // Select the .body element
     const characters = document.querySelector('.bodyy');
-
-    // Loop through each movie in the data and create a new card for it
     data.forEach(function (flight) {
       const card = document.createElement('div');
       card.classList.add('card');
@@ -46,7 +37,7 @@ fetch("http://localhost:4005/flights")
           // Update the number of available tickets and display it on the frontend
           availableTickets.textContent = numAvailableTickets - 1;
 
-          // Update the movie data in the backend
+         
           const newTicketsSold = flight.tickets_sold + 1;
           fetch(`http://localhost:4005/flights/${flight.id}`, {
             method: 'PATCH',
@@ -80,30 +71,30 @@ fetch("http://localhost:4005/flights")
 
 
 
-  // Fetch the list of products from the server and display them in the UI
+ 
 
 
 
-  fetch("http://localhost:4005/products")
+  fetch("http://localhost:4005/bookings")
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     const characters = document.querySelector('.details');
 
-    data.forEach(function (product) {
-      // Create a new card for each product and add it to the UI
+    data.forEach(function (booking) {
+      
       const card = document.createElement('div');
       card.classList.add('card');
       card.innerHTML = `
         
-          <h2><b>Name: ${product.name}</b></h3>
-          <p>Email: ${product.email}</p>
-          <p>Phone: ${product.phone}</p>
-          <p>From: ${product.from}</p>
-          <p>To: ${product.to}</p>
-          <p>Departure Date: ${product.departure}</p>
-          <p>Return Date: ${product.return}</p>
+          <h2><b>Name: ${booking.name}</b></h3>
+          <p>Email: ${booking.email}</p>
+          <p>Phone: ${booking.phone}</p>
+          <p>From: ${booking.from}</p>
+          <p>To: ${booking.to}</p>
+          <p>Departure Date: ${booking.departure}</p>
+          <p>Return Date: ${booking.return}</p>
 
           <div class="card-actions" >
             <button class="delete-button" style="background-color: #f44336; color: white; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Cancel Flight</button>
@@ -115,14 +106,14 @@ fetch("http://localhost:4005/flights")
       `;
       characters.appendChild(card);
 
-      // Add event listeners to the buttons
+      
       
       const deleteButton = card.querySelector('.delete-button');
       
       deleteButton.addEventListener('click',() =>{
         card.remove()
-        console.log(product.id)
-        deleteProduct(product.id)
+        console.log(booking.id)
+        deleteProduct(booking.id)
       });
       
     
@@ -130,7 +121,7 @@ fetch("http://localhost:4005/flights")
   });
   
   function deleteProduct(id){
-    fetch(`http://localhost:4005/products/${id}`,{
+    fetch(`http://localhost:4005/bookings/${id}`,{
       method:'DELETE',
       headers: {
         'Content-Type':'application/json'
@@ -166,9 +157,9 @@ function handleSubmit(e) {
   addProduct(productObj);
 }
 
-// Define the function that will add a new product to the server
+
 function addProduct(productObj) {
-  fetch('http://localhost:4005/products', {
+  fetch('http://localhost:4005/bookings', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -180,7 +171,7 @@ function addProduct(productObj) {
       console.log(product);
       alert('Flight booked Succefully. Have a nice flight Ahead 🎊🎉!');
     })
-    .catch(err => console.error(err)); // Add error handling
+    .catch(err => console.error(err)); 
 }
 
 
