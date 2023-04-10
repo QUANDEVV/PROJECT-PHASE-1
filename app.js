@@ -1,28 +1,3 @@
-const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
-const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
-const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-const header = document.querySelector('.header.container');
-
-hamburger.addEventListener('click', () => {
-	hamburger.classList.toggle('active');
-	mobile_menu.classList.toggle('active');
-});
-
-document.addEventListener('scroll', () => {
-	var scroll_position = window.scrollY;
-	if (scroll_position > 250) {
-		header.style.backgroundColor = '#29323c';
-	} else {
-		header.style.backgroundColor = 'transparent';
-	}
-});
-
-menu_item.forEach((item) => {
-	item.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
-		mobile_menu.classList.toggle('active');
-	});
-});
 
 
 
@@ -211,6 +186,37 @@ function addProduct(productObj) {
 
 
 
+
+
+const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+const header = document.querySelector('.header.container');
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
+
+
+
+
 // Add a click event listener to the like button
 const likeButton = card.querySelector('.like-button');
 const likeCounter = card.querySelector('.like-counter');
@@ -219,3 +225,9 @@ likeButton.addEventListener('click', function() {
   likeCount++;
   likeCounter.textContent = likeCount;
 });
+
+
+
+
+
+
